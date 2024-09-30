@@ -48,7 +48,7 @@ jobs:
 
     steps:
     - name: Pull Docker image from Docker Hub
-      run: docker pull my-nodejs-app:latest
+      run: docker pull shahnawaz312/my-nodejs-app:latest
 
     - name: Run Docker container
       run: |
