@@ -13,7 +13,7 @@ jobs:
       mysql:
         image: mysql:5.7
         env:
-          MYSQL_ROOT_PASSWORD: Root@123
+          MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: pharmacy
         ports:
           - 3306:3306
@@ -48,11 +48,11 @@ jobs:
 
     steps:
     - name: Pull Docker image from Docker Hub
-      run: docker pull shahnawaz312/my-nodejs-app:latest
+      run: docker pull shahnawaz312/my-nodejs-app:latest  # Ensure this matches your repository name
 
     - name: Run Docker container
       run: |
-        docker run -d -p 3000:3000 --name my-nodejs-app-container my-nodejs-app:latest
+        docker run -d -p 3000:3000 --name my-nodejs-app-container shahnawaz312/my-nodejs-app:latest  # Use the full name
 
     - name: Wait for container
       run: sleep 10
