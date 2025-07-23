@@ -5,7 +5,7 @@ var expressSession = require('express-session');
 var db = require('./db');
 //var hbs = require('express-handlebars');
 var path = require('path');
-var mysql = require('mysql2');
+var mysql = require('mysql');
 var async = require('async');
 
 var admin = require('./routes/admin');
