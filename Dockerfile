@@ -1,8 +1,20 @@
+# Use Node.js base image
 FROM node:18
+
+# Set working directory
 WORKDIR /pharmacy
-COPY package*.json .
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install
+
+# Copy the rest of the app
 COPY . .
+
+# Expose the port your app runs on
 EXPOSE 7000
 
-CMD npm start
+# Start the app
+CMD ["node", "app.js"]
